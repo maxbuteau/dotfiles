@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/maxime/Documents/fall2021/comp521/COMP521-assignment1'
+let g:netrw_dirhist_5='/home/maxime/Documents/fall2021/comp521/COMP521-assignment1/Assets'
+let g:netrw_dirhist_4='/home/maxime/Documents/fall2021/ecse429/financialcalculator/problem1.3/TripleGeo'
+let g:netrw_dirhist_3='/home/maxime/Documents/fall2021/ecse429/financialcalculator/problem1.3/TripleGeo/src/eu/geoknow/athenarc/triplegeo'
+let g:netrw_dirhist_2='/home/maxime/Documents/fall2021/ecse429/financialcalculator/problem1.3/TripleGeo/src/eu/geoknow/athenarc/triplegeo/utils'
+let g:netrw_dirhist_1='/home/maxime/Documents/fall2021/ecse429/financialcalculator/problem1.3/TripleGeo/src/eu/geoknow/athenarc/triplegeo'
+let g:netrw_dirhist_0='/home/maxime/Documents/fall2021/ecse429/financialcalculator/problem1.3/TripleGeo/src/eu/geoknow/athenarc/triplegeo/utils'
+let g:netrw_dirhist_9='/home/maxime/Documents/fall2021/ecse429/financialcalculator/problem1.3/TripleGeo'
+let g:netrw_dirhist_8='/home/maxime/Documents/fall2021/ecse429/financialcalculator/problem1.2/Algorithms'
+let g:netrw_dirhist_7='/home/maxime/Documents/fall2021/ecse429/financialcalculator/problem1.2'

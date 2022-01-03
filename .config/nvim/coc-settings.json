@@ -1,0 +1,14 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "javascript",
+    "html",
+    "json",
+    "vue",
+    "python",
+    "php",
+    "scss",
+    "tex"
+  ],
+  "vetur.validation.template": false
+}
