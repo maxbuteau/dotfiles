@@ -86,6 +86,9 @@ keys = [
     Key([mod], "l", lazy.layout.right()),
 
 
+# SWITCH SCREEN FOCUS
+    Key([mod], "n", lazy.next_screen()),
+
 # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "l",
         lazy.layout.grow_right(),
