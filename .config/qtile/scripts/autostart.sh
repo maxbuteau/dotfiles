@@ -30,10 +30,10 @@ if [ $keybLayout = "be" ]; then
 fi
 
 #autostart ArcoLinux Welcome App
-run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
+#run dex $HOME/.config/autostart/arcolinux-welcome-app.desktop &
 
 #Some ways to set your wallpaper besides variety or nitrogen
-feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
+#feh --bg-fill /usr/share/backgrounds/arcolinux/arco-wallpaper.jpg &
 #start the conky to learn the shortcuts
 (conky -c $HOME/.config/qtile/scripts/system-overview) &
 
@@ -42,7 +42,7 @@ run sxhkd -c ~/.config/qtile/sxhkd/sxhkdrc &
 
 
 #starting utility applications at boot time
-run variety &
+#run variety &
 run nm-applet &
 run pamac-tray &
 run xfce4-power-manager &
