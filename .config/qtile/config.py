@@ -64,12 +64,10 @@ keys = [
     Key([mod], "f", lazy.window.toggle_fullscreen()),
     Key([mod], "q", lazy.window.kill()),
 
-
 # SUPER + SHIFT KEYS
 
     Key([mod, "shift"], "q", lazy.window.kill()),
     Key([mod, "shift"], "r", lazy.restart()),
-
 
 # QTILE LAYOUT KEYS
     Key([mod], "n", lazy.layout.normalize()),
@@ -87,7 +85,7 @@ keys = [
 
 
 # SWITCH SCREEN FOCUS
-    Key([mod], "n", lazy.next_screen()),
+    Key([mod], "period", lazy.next_screen()),
 
 # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "l",
@@ -213,7 +211,7 @@ layout_theme = init_layout_theme()
 
 
 layouts = [
-    layout.MonadTall(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
+    layout.MonadTall(margin=8, border_width=2, border_focus="ede732", border_normal="#4c566a"),
     layout.MonadWide(margin=8, border_width=2, border_focus="#5e81ac", border_normal="#4c566a"),
     layout.Matrix(**layout_theme),
     layout.Bsp(**layout_theme),
