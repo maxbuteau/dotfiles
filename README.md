@@ -2,8 +2,9 @@
 To install my dot files on your system, run the following command:
 
 ```
-curl -Lks https://gist.githubusercontent.com/maxbuteau/580181a59e0920dd58a22077e4f61635/raw/e1a1aed82476d22d76029040b3713bcdb45a349b/gistfile1.txt | /bin/bash
+curl -Lks https://bit.ly/3JV95oP | /bin/bash
 ```
+If there are conflicting files, they will not be copied. Please either move them or delete them.
 
 ## The Software I Use
 ### Browsers
