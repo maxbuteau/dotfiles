@@ -334,6 +334,17 @@ def init_widgets_list():
                #          ),
                # # battery option 1  ArcoLinux Horizontal icons do not forget to import arcobattery at the top
                widget.Sep(
+                       linewidth = 1,
+                        padding = 10,
+                        foreground = colors[2],
+                        background = colors[1]
+                        ),
+               widget.OpenWeather(
+                       location="Montreal, CA",
+                       fontsize=12,
+                       format="{location_city}: {temp} °{units_temperature}, {weather_details}"
+                       ),
+               widget.Sep(
                         linewidth = 1,
                         padding = 10,
                         foreground = colors[2],
@@ -401,12 +412,12 @@ def init_widgets_list():
                #          foreground = colors[5],
                #          background = colors[1],
                #         ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[2],
+                        background = colors[1]
+                        ),
                widget.TextBox(
                         font="FontAwesome",
                         text="  ",
@@ -418,8 +429,8 @@ def init_widgets_list():
                widget.Clock(
                         foreground = colors[5],
                         background = colors[1],
-                        fontsize = 12,
-                        format="%Y-%m-%d %H:%M"
+                        fontsize = 14,
+                        format="%Y-%m-%d - %H:%M"
                         ),
                # widget.Sep(
                #          linewidth = 1,
