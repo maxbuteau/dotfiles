@@ -158,6 +158,9 @@ keys = [
 # TOGGLE FLOATING LAYOUT
     Key([mod, "shift"], "space", lazy.window.toggle_floating()),
 
+# SWITCH KEYBOARD LAYOUT
+    Key([mod], "comma", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout.")
+
     ]
 
 groups = []
@@ -253,7 +256,7 @@ def init_widgets_list():
     widgets_list = [
                widget.GroupBox(font="FontAwesome",
                         fontsize = 16,
-                        margin_y = -1,
+                        margin_y = 2,
                         margin_x = 0,
                         padding_y = 6,
                         padding_x = 5,
@@ -432,12 +435,15 @@ def init_widgets_list():
                         fontsize = 14,
                         format="%Y-%m-%d - %H:%M"
                         ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[2],
+                        background = colors[1]
+                        ),
+               widget.KeyboardLayout(
+                       configured_keyboards=['us', 'ca'],
+                       ),
                widget.Systray(
                         background=colors[1],
                         icon_size=20,
