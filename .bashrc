@@ -250,6 +250,9 @@ alias bls="betterlockscreen -u /usr/share/backgrounds/arcolinux/"
 #give the list of all installed desktops - xsessions desktops
 alias xd="ls /usr/share/xsessions"
 
+# use xterm-256color for ssh
+alias ssh='TERM=xterm-256color ssh'
+
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
 ex ()
