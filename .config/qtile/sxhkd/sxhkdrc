@@ -6,25 +6,9 @@
 # SUPER + FUNCTION KEYS
 #################################################################
 
-# Vivaldi
-super + F1
-	vivaldi-stable
-
-# Atom
-super + F2
-	atom
-
-#Inkscape
-super + F3
-    inkscape
-
 #Gimp
 super + F4
     gimp
-
-#Meld
-super + F5
-    meld
 
 #Vlc
 super + F6
@@ -33,14 +17,6 @@ super + F6
 #Virtualbox
 super + F7
     virtualbox
-
-#Thunar
-super + F8
-    thunar
-
-#Evolution
-super + F9
-    evolution
 
 #Spotify
 super + F10
@@ -58,10 +34,6 @@ super + F12
 # SUPER + ... KEYS
 #################################################################
 
-#Atom
-super + e
-    atom
-
 #Browser
 super + w
     google-chrome-stable
@@ -70,9 +42,9 @@ super + w
 super + c
     conky-toggle
 
-#Htop
+##Htop
 #super + h
-#    urxvt 'htop task manager' -e htop
+#    alacritty 'htop task manager' -e htop
 
 #arcolinux-logout
 super + x
@@ -82,19 +54,11 @@ super + x
 super + r
     rofi-theme-selector
 
-#Urxvt
-super + t
-    urxvt
-
 #Pavucontrol
 super + v
     pavucontrol
 
-#Pragha
-super + m
-    pragha
-
-#urxvt
+#alacritty
 super + Return
     alacritty
 
@@ -102,23 +66,13 @@ super + Return
 super + Escape
     xkill
 
-#Keyboard dependent
-#urxvt
-super + KP_Enter
-	urxvt
-
 #################################################################
 # SUPER + SHIFT KEYS
 #################################################################
 
 #File-Manager
 super + shift + Return
-	thunar
-
-#Keyboard dependent
-#File-Manager
-#super + shift + KP_Enter
-#	thunar
+	pcmanfm
 
 #dmenu
 super + shift + d
@@ -127,11 +81,6 @@ super + shift + d
 #reload sxhkd:
 super + shift + s
 	pkill -USR1 -x sxhkd
-
-#Keyboard dependent
-#super + shift + KP_Enter
-#	thunar
-
 
 #################################################################
 # CONTROL + ALT KEYS
@@ -145,41 +94,9 @@ ctrl + alt + w
 ctrl + alt + e
     arcolinux-tweak-tool
 
-#conky-rotate
-ctrl + alt + Next
-     conky-rotate -n
-
-#conky-rotate
-ctrl + alt + Prior
-    conky-rotate -p
-
-#File-Manager
-ctrl + alt + b
-     thunar
-
-#Catfish
-ctrl + alt + c
-     catfish
-
-#Chromium
-ctrl + alt + g
-    chromium -no-default-browser-check
-
-#Firefox
-ctrl + alt + f
-     firefox
-
 #Nitrogen
 ctrl + alt + i
      nitrogen
-
-#arcolinux-logout
-ctrl + alt + k
-     arcolinux-logout
-
-#arcolinux-logout
-ctrl + alt + l
-    arcolinux-logout
 
 #Pamac-manager
 ctrl + alt + p
@@ -197,32 +114,9 @@ ctrl + alt + u
 ctrl + alt + r
   rofi-theme-selector
 
-#Spotify
-ctrl + alt + s
-   spotify
-
-#urxvt
-ctrl + alt + Return
-    urxvt
-
-#urxvt
-ctrl + alt + t
-    urxvt
-
-#Vivaldi
-ctrl + alt + v
-    vivaldi-stable
-
 #Xfce4-appfinder
 ctrl + alt + a
     xfce4-appfinder
-
-
-#Keyboard dependent
-#urxvt
-#ctrl + alt + KP_Enter
-#     urxvt
-
 
 #################################################################
 # ALT + ... KEYS
@@ -260,15 +154,6 @@ alt + Up
 alt + Down
     variety --resume
 
-#Xfce4-appfinder
-alt + F2
-    xfce4-appfinder --collapsed
-
-#Xfce4-appfinder
-alt + F3
-    xfce4-appfinder
-
-
 #################################################################
 #VARIETY KEYS WITH PYWAL
 #################################################################
@@ -297,11 +182,6 @@ alt + shift + u
 # CONTROL + SHIFT KEYS
 #################################################################
 
-#Xcfe4-TaskManager
-ctrl + shift + Escape
-    xfce4-taskmanager
-
-
 #################################################################
 #     SCREENSHOTS
 #################################################################
@@ -322,11 +202,6 @@ ctrl + shift + Print
 #################################################################
 #     FUNCTION KEYS
 #################################################################
-
-#xfce4-terminal dropdown
-F12
-    xfce4-terminal --drop-down
-
 
 #################################################################
 #     MULTIMEDIA KEYS
@@ -377,16 +252,6 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     xbacklight -dec 10
 
-#########################
-#        POLYBAR        #
-#########################
-
-# Qtile has its own bar
-#Hide polybar
-#super + y
-#    polybar-msg cmd toggle
-
-
 #################################################################
 #################################################################
 ##################   DESKTOP SPECIFIC    ########################
@@ -405,26 +270,6 @@ ctrl + alt + o
 # SUPER + KEYS
 #################################################################
 
-#Toggle fullscreen of window
-#super + f
-#    qtile-cmd -o window -f toggle_fullscreen
-
-# normalize layout (undo size changes)
-#super + n
-#    qtile-cmd -o layout -f normalize
-
-#kill
-#super + q
-#    qtile-cmd -o window -f kill
-
-# Foucs WINDOW (Navigate)
-#super + {Left,Down,Up,Right}
-#    qtile-cmd -o layout -f {left,down,up,right}
-
-# Foucs WINDOW (Navigate)
-#super + {h,j,k,l}
-#    qtile-cmd -o layout -f {left,down,up,right}
-
 #################################################################
 # SUPER KEYS
 #################################################################
@@ -442,59 +287,8 @@ ctrl + alt + o
 # SUPER + SHIFT KEYS
 #################################################################
 
-#kill
-#super + shift + q
-#    qtile-cmd -o window -f kill
-
-#Quit Qtile
-#super + shift + x
-#    qtile-cmd -o cmd -f shutdown
-
-# FLIP LAYOUT FOR MONADTALL/MONADWIDE
-#super + shift + f
-#    qtile-cmd -o layout -f flip
-
-# MOVE WINDOWS UP OR DOWN BSP LAYOUT
-
-#super + shift + {h,j,k,l}
-#    qtile-cmd -o layout -f {shuffle_left,shuffle_down,shuffle_up,shuffle_right}
-
-# MOVE WINDOWS UP OR DOWN MONADTALL/MONADWIDE LAYOUT
-
-#super + shift + {Up,Down,Left,Right}
-#    qtile-cmd -o layout -f {shuffle_up,shuffle_down,swap_left,swap_right}
-
-# TOGGLE FLOATING LAYOUT
-#super + shift + space
-#    qtile-cmd -o window -f toggle_floating
-
-#Reload Qtile
-#super + shift + r
-#    qtile-cmd -o cmd -f restart
-
 
 #################################################################
 # SUPER + ALT KEYS
 #################################################################
 
-# FLIP LAYOUT FOR BSP
-
-#super + alt + {h,j,k,l}
-#    qtile-cmd -o layout -f {flip_left,flip_down,flip_up,flip_right}
-
-
-##################################
-## The RESIZE KEYS ARE RESERVED ##
-##  ~/.config/qtile/config.py   ##
-##      Lines 191 - 235         ##
-##################################
-## RESIZE UP, DOWN, LEFT, RIGHT ##
-#super + control + l
-#super + control + Right
-#super + control + h
-#super + control + Left
-#super + control + k
-#super + control + Up
-#super + control + j
-#super + control + Down
-##################################
