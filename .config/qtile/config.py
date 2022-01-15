@@ -260,13 +260,17 @@ def init_widgets_list():
                         margin_x = 0,
                         padding_y = 6,
                         padding_x = 5,
-                        borderwidth = 0,
+                        borderwidth = 2,
                         disable_drag = True,
-                        active = colors[9],
-                        inactive = colors[5],
+                        active = colors[9], # Active means someting is on that workspace
+                        inactive = colors[5], # Inactive means no window is open on that workspace
                         rounded = False,
-                        highlight_method = "text",
-                        this_current_screen_border = colors[8],
+                        highlight_method = "line", # Draws line under groups that are on a screen 
+                        highlight_color = colors[3],
+                        this_current_screen_border = colors[6], # Color of the line under the group open on this screen for the current screen
+                        this_screen_border = colors[4], # Color of the group open on the other screen for the current screen
+                        other_current_screen_border = colors[6], # Color of the line under the group open on this screen for the other screen
+                        other_screen_border = colors[4], # Color of the line under the group open on the other screen for the other screen
                         foreground = colors[2],
                         background = colors[1]
                         ),
@@ -461,6 +465,7 @@ def init_widgets_screen1():
 
 def init_widgets_screen2():
     widgets_screen2 = init_widgets_list()
+    del widgets_screen2[-1] # Remove the systray from secondary screen
     return widgets_screen2
 
 widgets_screen1 = init_widgets_screen1()
