@@ -18,11 +18,23 @@ function run {
 #xrandr --output HDMI2 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 #autorandr horizontal
 
+# Get both monitors. We don't hardcode their names as they sometimes change when switching graphics cards
+connectedOutputs=$(xrandr | awk '$2 == "connected"{print $1}')
+screens=($connectedOutputs)
+nrScreens=${#screens[@]}
+
+# If we have 2 monitors connected, set their position and resolution
+# TODO: resolution should not be hardcoded, as I sometimes connect to a different resolution monitor
+if [ $nrScreens -eq 2 ]
+then
+    xrandr --output ${screens[0]} --mode 1920x1080 --pos 2560x0 --rotate normal --output ${screens[1]} --primary --mode 2560x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+fi
+
 # screen layout for 2560 dual monitor
 # xrandr --output eDP1 --mode 1920x1080 --pos 2560x0 --rotate normal --output HDMI1 --primary --mode 2560x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 # screen layout for 1980 dual monitor
-xrandr --output eDP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
+#xrandr --output eDP1 --mode 1920x1080 --pos 1920x0 --rotate normal --output HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --output VIRTUAL1 --off
 
 keybLayout=$(setxkbmap -v | awk -F "+" '/symbols/ {print $2}')
 
