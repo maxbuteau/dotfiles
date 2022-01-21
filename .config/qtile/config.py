@@ -324,21 +324,21 @@ def init_widgets_list():
                #          border_width = 1,
                #          line_width = 1,
                #          ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # # do not activate in Virtualbox - will break qtile
-               # widget.ThermalSensor(
-               #          foreground = colors[5],
-               #          foreground_alert = colors[6],
-               #          background = colors[1],
-               #          metric = True,
-               #          padding = 3,
-               #          threshold = 80
-               #          ),
+               widget.Sep(
+                        linewidth = 1,
+                        padding = 10,
+                        foreground = colors[2],
+                        background = colors[1]
+                        ),
+               # do not activate in Virtualbox - will break qtile
+               widget.ThermalSensor(
+                        foreground = colors[5],
+                        foreground_alert = colors[6],
+                        background = colors[1],
+                        metric = True,
+                        padding = 3,
+                        threshold = 80
+                        ),
                # # battery option 1  ArcoLinux Horizontal icons do not forget to import arcobattery at the top
                widget.Sep(
                        linewidth = 1,
