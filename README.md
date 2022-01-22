@@ -40,13 +40,19 @@ If there are conflicting files, they will not be copied. Please either move them
 ### Graphics
 * xf86-video-intel
 * nvidia
+* install mesa-utils
 * optimus-manager
+* install lib32-intel for steam
+* optimus-manager-qt (for the icon, set driver to intel and tearfree to yes to avoid screen tearing)
 ### Other
 * nitrogen
 * dmenu
 * galculator
-* gimp
 * picom
 * sxhkd
+* nbfc (notebook fan control), some good configs:
+** Asus Zenbook UX430UQ
+** Asus Zenbook UX430UA
+** Asus ROG G752VS
 
 
