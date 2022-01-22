@@ -51,8 +51,8 @@ If there are conflicting files, they will not be copied. Please either move them
 * picom
 * sxhkd
 * nbfc (notebook fan control), some good configs:
-** Asus Zenbook UX430UQ
-** Asus Zenbook UX430UA
-** Asus ROG G752VS
+    * Asus Zenbook UX430UQ
+    * Asus Zenbook UX430UA
+    * Asus ROG G752VS
 
 
