@@ -38,6 +38,14 @@ super + F12
 super + w
     google-chrome-stable
 
+#Email
+super + e
+    thunderbird
+
+#Discord
+super + d
+    discord
+
 #Conky-toggle
 super + c
     conky-toggle
