@@ -54,5 +54,16 @@ If there are conflicting files, they will not be copied. Please either move them
     * Asus Zenbook UX430UQ
     * Asus Zenbook UX430UA
     * Asus ROG G752VS
+### Hardware Specific
+* Trackpad (in /etc/X11/xorg.conf.d/30-touchpad.conf)
+```
+Section "InputClass"
+    Identifier "touchpad"
+    Driver "libinput"
+    MatchIsTouchpad "on"
+    Option "Tapping" "on"
+    Option "NaturalScrolling" "true"
+EndSection
+```
 
 
