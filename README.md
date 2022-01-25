@@ -54,6 +54,8 @@ If there are conflicting files, they will not be copied. Please either move them
     * Asus Zenbook UX430UQ
     * Asus Zenbook UX430UA
     * Asus ROG G752VS
+* betterlockscreen (used with arcolinux-logout, might want to remove that)
+    * Pressing space to wake from sleep registers as first character, so look into it or press shift
 ### Hardware Specific
 * Trackpad (in /etc/X11/xorg.conf.d/30-touchpad.conf)
 ```
