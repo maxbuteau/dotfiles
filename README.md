@@ -42,6 +42,7 @@ If there are conflicting files, they will not be copied. Please either move them
 * nvidia
 * install mesa-utils
 * optimus-manager
+    * Setting ```dynamic_power_management=fine``` and setting graphics to hybrid seems to give a good result (in /etc/optimus-manager/optimus-manager.conf) 
 * install lib32-intel for steam
 * optimus-manager-qt (for the icon, set driver to intel and tearfree to yes to avoid screen tearing)
 ### Other
