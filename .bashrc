@@ -33,7 +33,7 @@ fi
 bind "set completion-ignore-case on"
 
 #list
-alias ls='ls --color=auto'
+alias ls='ls --color=auto --group-directories-first'
 alias la='ls -a'
 alias ll='ls -la'
 alias l='ls'
