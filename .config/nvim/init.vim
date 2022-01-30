@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 
 " Colorscheme
 Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', {'as':'dracula'}
 " search tool that recursively searches through current directory
 Plug 'jremmen/vim-ripgrep'
 Plug 'tpope/vim-fugitive'
@@ -23,8 +24,9 @@ Plug 'lervag/vimtex'
 
 call plug#end()
 
-colorscheme gruvbox
-set background=dark
+""colorscheme gruvbox
+""set background=dark
+colorscheme dracula
 
 " Allows ripgrep to always detect your root
 if executable('rg')
