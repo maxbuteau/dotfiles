@@ -51,6 +51,7 @@ If there are conflicting files, they will not be copied. Please either move them
 * galculator
 * picom
 * sxhkd
+* starship (command line prompt)
 * nbfc (notebook fan control), some good configs:
     * Asus Zenbook UX430UQ
     * Asus Zenbook UX430UA
