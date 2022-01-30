@@ -19,7 +19,7 @@ export HISTCONTROL=ignoreboth:erasedups
 export EDITOR='nvim'
 export VISUAL='nvim'
 
-PS1='[\u@\h \W]\$ '
+PS1='[\u@\h \w]\$ '
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
@@ -327,3 +327,6 @@ neofetch
 #colorscript random
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Starfish prompt
+eval "$(starship init bash)"
