@@ -251,6 +251,11 @@ def init_widgets_defaults():
 
 widget_defaults = init_widgets_defaults()
 
+regular_font = "Ubuntu"
+regular_font_size = 15
+bold_font = "Ubuntu Bold"
+clock_font_size = 17
+
 def init_widgets_list():
     prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
     widgets_list = [
@@ -281,7 +286,8 @@ def init_widgets_list():
                         background = colors[1]
                         ),
                widget.CurrentLayout(
-                        font = "Noto Sans Bold",
+                        font = bold_font,
+                        fontsize = regular_font_size,
                         foreground = colors[5],
                         background = colors[1]
                         ),
@@ -291,39 +297,11 @@ def init_widgets_list():
                         foreground = colors[2],
                         background = colors[1]
                         ),
-               widget.WindowName(font="Noto Sans",
-                        fontsize = 12,
+               widget.WindowName(font=regular_font,
+                        fontsize = regular_font_size,
                         foreground = colors[5],
                         background = colors[1],
                         ),
-               # widget.Net(
-               #          font="Noto Sans",
-               #          fontsize=12,
-               #          interface="enp0s31f6",
-               #          foreground=colors[2],
-               #          background=colors[1],
-               #          padding = 0,
-               #          ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # widget.NetGraph(
-               #          font="Noto Sans",
-               #          fontsize=12,
-               #          bandwidth="down",
-               #          interface="auto",
-               #          fill_color = colors[8],
-               #          foreground=colors[2],
-               #          background=colors[1],
-               #          graph_color = colors[8],
-               #          border_color = colors[2],
-               #          padding = 0,
-               #          border_width = 1,
-               #          line_width = 1,
-               #          ),
                widget.Sep(
                         linewidth = 1,
                         padding = 10,
@@ -332,6 +310,8 @@ def init_widgets_list():
                         ),
                # do not activate in Virtualbox - will break qtile
                widget.ThermalSensor(
+                       font = regular_font,
+                       fontsize = regular_font_size,
                         foreground = colors[5],
                         foreground_alert = colors[6],
                         background = colors[1],
@@ -348,8 +328,9 @@ def init_widgets_list():
                         ),
                widget.OpenWeather(
                        location="Montreal, CA",
-                       fontsize=12,
-                       format="{location_city}: {temp} °{units_temperature}, {weather_details}"
+                       format="{location_city}: {temp} °{units_temperature}, {weather_details}",
+                       font = regular_font,
+                       fontsize = regular_font_size
                        ),
                widget.Sep(
                         linewidth = 1,
@@ -365,60 +346,6 @@ def init_widgets_list():
                         update_interval = 5,
                         background = colors[1]
                         ),
-               # # battery option 2  from Qtile
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # widget.Battery(
-               #          font="Noto Sans",
-               #          update_interval = 10,
-               #          fontsize = 12,
-               #          foreground = colors[5],
-               #          background = colors[1],
-	           #          ),
-               # widget.TextBox(
-               #          font="FontAwesome",
-               #          text="  ",
-               #          foreground=colors[6],
-               #          background=colors[1],
-               #          padding = 0,
-               #          fontsize=16
-               #          ),
-               # widget.CPUGraph(
-               #          border_color = colors[2],
-               #          fill_color = colors[8],
-               #          graph_color = colors[8],
-               #          background=colors[1],
-               #          border_width = 1,
-               #          line_width = 1,
-               #          core = "all",
-               #          type = "box"
-               #          ),
-               # widget.Sep(
-               #          linewidth = 1,
-               #          padding = 10,
-               #          foreground = colors[2],
-               #          background = colors[1]
-               #          ),
-               # widget.TextBox(
-               #          font="FontAwesome",
-               #          text="  ",
-               #          foreground=colors[4],
-               #          background=colors[1],
-               #          padding = 0,
-               #          fontsize=16
-               #          ),
-               # widget.Memory(
-               #          font="Noto Sans",
-               #          format = '{MemUsed}M/{MemTotal}M',
-               #          update_interval = 1,
-               #          fontsize = 12,
-               #          foreground = colors[5],
-               #          background = colors[1],
-               #         ),
                widget.Sep(
                         linewidth = 1,
                         padding = 10,
@@ -436,7 +363,8 @@ def init_widgets_list():
                widget.Clock(
                         foreground = colors[5],
                         background = colors[1],
-                        fontsize = 14,
+                        fontsize = clock_font_size,
+                        font = regular_font,
                         format="%Y-%m-%d - %H:%M"
                         ),
                widget.Sep(
@@ -447,11 +375,19 @@ def init_widgets_list():
                         ),
                widget.KeyboardLayout(
                        configured_keyboards=['us', 'ca'],
+                       font = regular_font,
+                       fontsize = regular_font_size
+                       ),
+               widget.Sep(
+                       linewidth = 1,
+                       padding = 10,
+                       foreground = colors[2],
+                       background = colors[1]
                        ),
                widget.Systray(
                         background=colors[1],
-                        icon_size=20,
-                        padding = 4
+                        icon_size=22,
+                        padding = 6
                         ),
               ]
     return widgets_list
