@@ -44,7 +44,7 @@ super + e
 
 #Discord
 super + d
-    discord
+    discord --no-sandbox
 
 #Conky-toggle
 super + c
@@ -297,6 +297,8 @@ ctrl + alt + o
 
 
 #################################################################
-# SUPER + ALT KEYS
+# DMENU (SUPER + ALT)
 #################################################################
+super + alt + c
+    ~/dmenu-scripts/dm-conf-files
 
