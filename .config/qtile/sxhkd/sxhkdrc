@@ -44,7 +44,7 @@ super + e
 
 #Discord
 super + d
-    discord --no-sandbox
+    flatpak run com.discordapp.Discord
 
 #Conky-toggle
 super + c
@@ -73,6 +73,9 @@ super + Return
 #Xkill
 super + Escape
     xkill
+
+super + t
+    pystopwatch
 
 #################################################################
 # SUPER + SHIFT KEYS
