@@ -12,7 +12,7 @@ If there are conflicting files, they will not be copied. Please either move them
 * firefox
 ### Communication
 * thunderbird
-* discord
+* discord (use the flatpak version, seems to get rid of the lag on arch linux)
 * zoom
 ### File Managers
 * pcmanfm
