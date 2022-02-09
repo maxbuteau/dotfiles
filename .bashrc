@@ -328,5 +328,9 @@ neofetch
 
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# python virtual environment
+alias va='source .venv/bin/activate'
+alias vd='deactivate'
+
 # Starfish prompt
 eval "$(starship init bash)"
