@@ -10,3 +10,14 @@
 * coc-texlab
 * coc-tsserver
 * coc-vetur
+
+## Environments I want to configure
+* python
+* java
+* unity
+* c
+* bash
+* Latex
+* JavaScript
+* HTML
+* Vue.js
