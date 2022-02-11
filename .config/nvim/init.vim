@@ -2,14 +2,14 @@ source ~/.config/nvim/sets.vim
 
 call plug#begin('~/.vim/plugged')
 
-" Colorscheme
+" Colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'dracula/vim', {'as':'dracula'}
 " search tool that recursively searches through current directory
 Plug 'jremmen/vim-ripgrep'
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 Plug 'vim-utils/vim-man'
-Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
@@ -21,24 +21,34 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'lervag/vimtex'
+" python syntax highlighting
+Plug 'vim-python/python-syntax'
 
 call plug#end()
 
-""colorscheme gruvbox
-""set background=dark
-colorscheme dracula
+colorscheme gruvbox
+set background=dark
+""colorscheme dracula
 
+"set pyxversion=3
 " Allows ripgrep to always detect your root
 if executable('rg')
     let g:rg_derive_root='true'
 endif
 
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:python_highlight_all = 1
+let g:python_highlight_space_errors = 0
+
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 let mapleader = " "
 let g:netrw_browse_split = 2
 let g:netrw_winsize = 25
 
-let g:ctrlp_use_caching = 0
+""let g:tex_flavor = 'latex'
+let g:vimtex_indent_enabled = 'true'
+""let g:vimtex_syntax_enabled = 0
+
+" let g:ctrlp_use_caching = 0
 
 " Resize window
 nnoremap <silent> <Leader>= :vertical resize +5<CR>

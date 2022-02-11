@@ -5,10 +5,10 @@
     "html",
     "json",
     "vue",
-    "python",
     "php",
+    "python",
     "scss",
-    "tex"
+    "latex"
   ],
   "vetur.validation.template": false
 }
