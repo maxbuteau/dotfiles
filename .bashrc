@@ -14,8 +14,6 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
-# Make nano the default editor
-
 export EDITOR='nvim'
 export VISUAL='nvim'
 
@@ -252,6 +250,9 @@ alias xd="ls /usr/share/xsessions"
 
 # use xterm-256color for ssh
 alias ssh='TERM=xterm-256color ssh'
+
+# ssh into mcgill cs421
+alias cs421='TERM=xterm-256color ssh mbutea@winter2022-comp421.cs.mcgill.ca'
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
