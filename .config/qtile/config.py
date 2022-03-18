@@ -55,6 +55,25 @@ def window_to_next_group(qtile):
         i = qtile.groups.index(qtile.currentGroup)
         qtile.currentWindow.togroup(qtile.groups[i + 1].name)
 
+# Send a window to the other screen
+# Set switch_group to true to also switch to that group on current screen
+# Set switch_screen to False to stay on current screen
+def window_to_other_screen(qtile, switch_group=False, switch_screen=True):
+    i = qtile.screens.index(qtile.current_screen)
+    # If we are on primary screen go to secondary screen
+    if i < len(qtile.screens) - 1:
+        other_screen_index = i + 1 
+        group = qtile.screens[other_screen_index].group.name
+    # Else go to primary screen
+    else:
+        other_screen_index = i - 1 
+        group = qtile.screens[other_screen_index].group.name
+
+    qtile.current_window.togroup(group, switch_group=switch_group)
+    if switch_screen:
+        qtile.cmd_to_screen(other_screen_index)
+
+
 keys = [
 
 # Most of our keybindings are in sxhkd file - except these
@@ -86,6 +105,9 @@ keys = [
 
 # SWITCH SCREEN FOCUS
     Key([mod], "period", lazy.next_screen()),
+
+# SWITCH WINDOW TO OTHER SCREEN
+    Key([mod, "shift"], "period", lazy.function(window_to_other_screen)),
 
 # RESIZE UP, DOWN, LEFT, RIGHT
     Key([mod, "control"], "l",
@@ -162,6 +184,8 @@ keys = [
     Key([mod], "comma", lazy.widget["keyboardlayout"].next_keyboard(), desc="Next keyboard layout.")
 
     ]
+
+
 
 groups = []
 
