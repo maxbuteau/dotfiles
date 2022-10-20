@@ -333,6 +333,8 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias va='source .venv/bin/activate'
 alias vd='deactivate'
 
+# shorten nvim
+alias n='nvim'
 # Starfish prompt
 eval "$(starship init bash)"
 
@@ -344,4 +346,8 @@ vicd()
         return 1
     fi
     cd "$dst"
+}
+
+e() {
+    evince $1 & disown
 }
