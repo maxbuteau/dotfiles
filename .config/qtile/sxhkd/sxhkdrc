@@ -19,7 +19,7 @@ super + F7
     virtualbox
 
 #Spotify
-super + F10
+super + m
     spotify
 
 #Rofi Fullscreen
