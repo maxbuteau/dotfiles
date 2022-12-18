@@ -35,108 +35,110 @@ def separator():
     )
 
 
-widgets_list = [
-    widget.GroupBox(
-        font="FontAwesome",
-        fontsize = 16,
-        margin_y = 2,
-        margin_x = 0,
-        padding_y = 6,
-        padding_x = 5,
-        borderwidth = 2,
-        disable_drag = True,
-        active = colors[9], # Active means someting is on that workspace
-        inactive = colors[5], # Inactive means no window is open on that workspace
-        rounded = False,
-        highlight_method = "line", # Draws line under groups that are on a screen 
-        highlight_color = colors[3],
-        this_current_screen_border = colors[6], # Color of the line under the group open on this screen for the current screen
-        this_screen_border = colors[4], # Color of the group open on the other screen for the current screen
-        other_current_screen_border = colors[6], # Color of the line under the group open on this screen for the other screen
-        other_screen_border = colors[4], # Color of the line under the group open on the other screen for the other screen
-        foreground = colors[2],
-        background = colors[1]
-    ),
-    separator(),
-    widget.CurrentLayout(
-        font = bold_font,
-        fontsize = regular_font_size,
-        foreground = colors[5],
-        background = colors[1]
-    ),
-    separator(),
-    widget.WindowName(
-        font=regular_font,
-        fontsize = regular_font_size,
-        foreground = colors[5],
-        background = colors[1],
-    ),
-    separator(),
-    widget.ThermalSensor(
-        font = regular_font,
-        fontsize = regular_font_size,
-        foreground = colors[5],
-        foreground_alert = colors[6],
-        background = colors[1],
-        metric = True,
-        padding = 3,
-        threshold = 80
-    ),
-    separator(),
-    widget.OpenWeather(
-       location="Montreal, CA",
-       format="{location_city}: {temp} °{units_temperature}, {weather_details}",
-       font = regular_font,
-       fontsize = regular_font_size,
-       background = colors[1]
-    ),
-    separator(),
-    arcobattery.BatteryIcon(
-        padding=0,
-        scale=0.7,
-        y_poss=2,
-        theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
-        update_interval = 5,
-        background = colors[1]
-    ),
-    separator(),
-    widget.TextBox(
-        font="FontAwesome",
-        text="  ",
-        foreground=colors[3],
-        background=colors[1],
-        padding = 0,
-        fontsize=16
-    ),
-    widget.Clock(
-        foreground = colors[5],
-        background = colors[1],
-        fontsize = clock_font_size,
-        font = regular_font,
-        format="%Y-%m-%d - %H:%M"
-    ),
-    separator(),
-    widget.KeyboardLayout(
-        configured_keyboards=['us', 'ca'],
-        font = regular_font,
-        fontsize = regular_font_size,
-        background = colors[1]
-    ),
-    separator(),
-    widget.Systray(
-        background=colors[1],
-        icon_size=22,
-        padding = 6
-    )
-]
+def init_widgets_list():
+    widgets_list = [
+        widget.GroupBox(
+            font="FontAwesome",
+            fontsize = 16,
+            margin_y = 2,
+            margin_x = 0,
+            padding_y = 6,
+            padding_x = 5,
+            borderwidth = 2,
+            disable_drag = True,
+            active = colors[9], # Active means someting is on that workspace
+            inactive = colors[5], # Inactive means no window is open on that workspace
+            rounded = False,
+            highlight_method = "line", # Draws line under groups that are on a screen 
+            highlight_color = colors[3],
+            this_current_screen_border = colors[6], # Color of the line under the group open on this screen for the current screen
+            this_screen_border = colors[4], # Color of the group open on the other screen for the current screen
+            other_current_screen_border = colors[6], # Color of the line under the group open on this screen for the other screen
+            other_screen_border = colors[4], # Color of the line under the group open on the other screen for the other screen
+            foreground = colors[2],
+            background = colors[1]
+        ),
+        separator(),
+        widget.CurrentLayout(
+            font = bold_font,
+            fontsize = regular_font_size,
+            foreground = colors[5],
+            background = colors[1]
+        ),
+        separator(),
+        widget.WindowName(
+            font=regular_font,
+            fontsize = regular_font_size,
+            foreground = colors[5],
+            background = colors[1],
+        ),
+        separator(),
+        widget.ThermalSensor(
+            font = regular_font,
+            fontsize = regular_font_size,
+            foreground = colors[5],
+            foreground_alert = colors[6],
+            background = colors[1],
+            metric = True,
+            padding = 3,
+            threshold = 80
+        ),
+        separator(),
+        widget.OpenWeather(
+           location="Montreal, CA",
+           format="{location_city}: {temp} °{units_temperature}, {weather_details}",
+           font = regular_font,
+           fontsize = regular_font_size,
+           background = colors[1]
+        ),
+        separator(),
+        arcobattery.BatteryIcon(
+            padding=0,
+            scale=0.7,
+            y_poss=2,
+            theme_path=home + "/.config/qtile/icons/battery_icons_horiz",
+            update_interval = 5,
+            background = colors[1]
+        ),
+        separator(),
+        widget.TextBox(
+            font="FontAwesome",
+            text="  ",
+            foreground=colors[3],
+            background=colors[1],
+            padding = 0,
+            fontsize=16
+        ),
+        widget.Clock(
+            foreground = colors[5],
+            background = colors[1],
+            fontsize = clock_font_size,
+            font = regular_font,
+            format="%Y-%m-%d - %H:%M"
+        ),
+        separator(),
+        widget.KeyboardLayout(
+            configured_keyboards=['us', 'ca'],
+            font = regular_font,
+            fontsize = regular_font_size,
+            background = colors[1]
+        ),
+        separator(),
+        widget.Systray(
+            background=colors[1],
+            icon_size=22,
+            padding = 6
+        )
+    ]
+    return widgets_list
 
 
 def get_widgets_screen1():
-    return widgets_list[:]
+    return init_widgets_list()
 
 def get_widgets_screen2():
     # Remove systray and extra separator
-    return widgets_list[:-2]
+    return init_widgets_list()[:-2]
 
 def get_widget_defaults():
     return dict(
