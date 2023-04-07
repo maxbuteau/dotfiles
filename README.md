@@ -6,6 +6,12 @@ curl -Lks https://bit.ly/3JV95oP | /bin/bash
 ```
 If there are conflicting files, they will not be copied. Please either move them or delete them.
 
+# Troubleshooting
+When updating your system, errors related to arch linux keyring can generally be fixed by first running:
+```
+sudo pacman -S archlinux-keyring
+```
+
 ## The Software I Use
 ### Browsers
 * google-chrome-stable
