@@ -21,3 +21,10 @@
 * JavaScript
 * HTML
 * Vue.js
+
+## General TODO:
+* Configure Netrw
+    * Close the menu when we open a file
+    * Make it so fuzzy finder only goes through the directory we are currently in, (even if we opened nvim from another directory)
+* Look into LSP vs coc
+* Look into changing to Lua config
