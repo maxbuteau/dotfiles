@@ -75,5 +75,3 @@ Section "InputClass"
     Option "NaturalScrolling" "true"
 EndSection
 ```
-
-Test
