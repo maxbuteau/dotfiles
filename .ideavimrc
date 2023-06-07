@@ -1,0 +1,22 @@
+source ~/.config/nvim/sets.vim
+
+let mapleader = " "
+
+inoremap jk <Esc>
+inoremap kj <Esc>
+nnoremap Y y$
+
+set NERDTree
+let g:NERDTreeMapActivateNode='l'
+let g:NERDTreeMapJumpParent='h'
+
+set surround
+set ideajoin
+set easymotion
+set idearefactormode=keep
+
+" Switch windows
+nnoremap <leader>h <C-W>h
+nnoremap <leader>j <C-W>j
+nnoremap <leader>k <C-W>k
+nnoremap <leader>l <C-W>l
