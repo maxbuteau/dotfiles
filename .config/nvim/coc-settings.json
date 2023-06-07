@@ -10,5 +10,8 @@
     "scss",
     "latex"
   ],
-  "vetur.validation.template": false
+  "vetur.validation.template": false,
+  "suggest.noselect": true,
+  "suggest.enablePreselect": false,
+  "coc.preferences.formatOnSave": true
 }
