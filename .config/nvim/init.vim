@@ -49,7 +49,7 @@ let g:vimtex_indent_enabled = 'true'
 ""let g:vimtex_syntax_enabled = 0
 
 " let g:ctrlp_use_caching = 0
-let g:coc_node_path = '/home/mbuteau/.nvm/versions/node/v14.21.3/bin/node'
+" let g:coc_node_path = '/home/mbuteau/.nvm/versions/node/v14.21.3/bin/node'
 
 " Resize window
 nnoremap <silent> <Leader>= :vertical resize +5<CR>
